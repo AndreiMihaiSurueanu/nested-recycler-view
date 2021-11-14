@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.nestedrecyclerview.R;
 import com.example.nestedrecyclerview.model.AllCategory;
+import com.example.nestedrecyclerview.model.CategoryItem;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
     public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
 
         holder.categoryTitle.setText(allCategoryList.get(position).getCategoryTitle());
+        setCatItemRecycler(holder.itemRecycler, allCategoryList.get(position).getCategoryItemList());
 
     }
 
@@ -46,12 +48,22 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
     public static final class MainViewHolder extends RecyclerView.ViewHolder{
 
         TextView categoryTitle;
+        RecyclerView itemRecycler;
 
         public MainViewHolder(@NonNull View itemView) {
             super(itemView);
 
             categoryTitle = itemView.findViewById(R.id.cat_title);
+            itemRecycler = itemView.findViewById(R.id.item_recycler);
 
         }
+    }
+
+    private void setCatItemRecycler(RecyclerView recyclerView, List<CategoryItem> categoryItemList){
+
+        CategoryItemRecyclerAdapter itemRecyclerAdapter = new CategoryItemRecyclerAdapter(context, categoryItemList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, RecyclerView.HORIZONTAL, false));
+        recyclerView.setAdapter(itemRecyclerAdapter);
+
     }
 }
