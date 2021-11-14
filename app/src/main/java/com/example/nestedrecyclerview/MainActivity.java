@@ -41,10 +41,19 @@ public class MainActivity extends AppCompatActivity {
         categoryItemList2.add(new CategoryItem(1, R.drawable.bestofoscar5));
         categoryItemList2.add(new CategoryItem(1, R.drawable.bestofoscar6));
 
+        // added in 3rd category
+        List<CategoryItem> categoryItemList3 = new ArrayList<>();
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi1));
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi2));
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi3));
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi4));
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi5));
+        categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi6));
+
         List<AllCategory> allCategoryList = new ArrayList<>();
         allCategoryList.add(new AllCategory("Hollywood", categoryItemList));
         allCategoryList.add(new AllCategory("Best of Oscars", categoryItemList2));
-        allCategoryList.add(new AllCategory("Movies Dubbed in Hindi"));
+        allCategoryList.add(new AllCategory("Movies Dubbed in Hindi", categoryItemList3));
         allCategoryList.add(new AllCategory("Category 4th"));
         allCategoryList.add(new AllCategory("Category 5th"));
 
