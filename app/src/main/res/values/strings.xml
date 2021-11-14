@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NestedRecyclerView</string>
+    <string name="nested_recyclerview">Nested RecyclerView</string>
 </resources>
