@@ -50,12 +50,31 @@ public class MainActivity extends AppCompatActivity {
         categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi5));
         categoryItemList3.add(new CategoryItem(1, R.drawable.moviedubbedinhindi6));
 
+        // added in 4th category
+        List<CategoryItem> categoryItemList4 = new ArrayList<>();
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood1));
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood2));
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood3));
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood4));
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood5));
+        categoryItemList4.add(new CategoryItem(1, R.drawable.hollywood6));
+
+
+        // added in 5th category
+        List<CategoryItem> categoryItemList5 = new ArrayList<>();
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar1));
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar2));
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar3));
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar4));
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar5));
+        categoryItemList5.add(new CategoryItem(1, R.drawable.bestofoscar6));
+
         List<AllCategory> allCategoryList = new ArrayList<>();
         allCategoryList.add(new AllCategory("Hollywood", categoryItemList));
         allCategoryList.add(new AllCategory("Best of Oscars", categoryItemList2));
         allCategoryList.add(new AllCategory("Movies Dubbed in Hindi", categoryItemList3));
-        allCategoryList.add(new AllCategory("Category 4th"));
-        allCategoryList.add(new AllCategory("Category 5th"));
+        allCategoryList.add(new AllCategory("Category 4th", categoryItemList4));
+        allCategoryList.add(new AllCategory("Category 5th", categoryItemList5));
 
         setMainCategoryRecycler(allCategoryList);
 
