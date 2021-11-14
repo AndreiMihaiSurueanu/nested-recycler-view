@@ -6,6 +6,9 @@
 # Files for the ART/Dalvik VM
 *.dex
 
+# Project resources
+NestedRecyclerView-master
+
 # Java class files
 *.class
 
